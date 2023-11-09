@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background: black;
+    box-shadow: 4mm 4mm #303030;
+    
+    box-sizing: border-box;
+    width: 63.5mm;
+    min-width: 63.5mm;
+    height: 88mm;
+    border-radius: 3mm;
+    padding: 8mm;
+    margin-top: 30px;
+}
+input[type="text"], input[type="submit"] {
+    color: white;   
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    text-align: left;
+    background-color: black;
+    border: none;
+}
+</style>
+</head>
+<body>
+<form action="/game" method="get">
+    <input type="text" name="name" placeholder="Game" />
+    <input type="text" name="player" placeholder="Player Name" />
+    <div style="flex: 1"></div>
+    <input type="submit" value="Join Game" />
+</form>
+</body>

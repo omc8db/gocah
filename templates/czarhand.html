@@ -1,0 +1,11 @@
+<!--template on Game -->
+<li style="background-color: bisque">
+    You are the card czar.<br><br>
+    Pick the best answer.
+</li>
+{{$game := printf "?game=%s" .Name }}
+{{range $sub := .Submitted}}
+    <li hx-swap="delete swap:0.5s" hx-get="/choose{{$game}}&player={{$sub.Player}}">
+        {{$sub.Card}}
+    </li>
+{{end}}

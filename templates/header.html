@@ -1,0 +1,11 @@
+<!-- template on Game -->
+<div class="scorebox">
+    <table>
+        {{range $player := .Players}}
+            <tr><th>{{$player.Name}}</th><th>{{$player.Score}}</th></tr>
+        {{end}}
+    </table>
+    <hr>
+    <p>{{.CardCzar}} is the card czar</p>
+</div>
+<p class="question">{{.Question}}</p>

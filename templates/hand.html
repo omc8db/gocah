@@ -1,0 +1,7 @@
+<!-- template on GameView -->
+{{$subPrefix := printf "?game=%s&player=%s" .Game.Name .Player.Name }}
+{{range $i, $card := .Player.Cards}}
+    <li hx-swap="delete swap:0.5s" hx-get="/submit{{$subPrefix}}&card={{$i}}">
+        {{$card}}
+    </li>
+{{end}}
